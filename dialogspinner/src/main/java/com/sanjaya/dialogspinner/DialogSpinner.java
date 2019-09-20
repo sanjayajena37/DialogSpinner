@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-//import com.sanjaya.R.l;
 import java.util.ArrayList;
 
 public class DialogSpinner {
@@ -44,8 +43,6 @@ public class DialogSpinner {
         adapterSpinner = new AdapterSpinner(context, spinnerDtos);
         spinnerRecy.setAdapter(adapterSpinner);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(context);
-//                                mLayoutManager.setReverseLayout(true);
-//                                mLayoutManager.setStackFromEnd(true);
         spinnerRecy.setLayoutManager(mLayoutManager);
         spinnerRecy.addOnItemTouchListener(new RecyclerItemClickListener(context, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
@@ -58,73 +55,6 @@ public class DialogSpinner {
         }));
         spinnerRecy.setHasFixedSize(true);
 
-//                fetchSpinnerList();
-           /* final String URLTEXT = "http://neighbrsnook.com/admin/api/master?flag=4";
-
-            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, URLTEXT, null, new Response.Listener<JSONObject>() {
-                @Override
-                public void onResponse(JSONObject response) {
-
-                    try {
-                        //JSONArray jsonArray = response.getJSONArray("nbdata");
-                        String status = response.getString("status");
-                        String message = response.getString("message");
-
-
-                        if (status.equals("success")) {
-                            JSONArray jsonArray = response.getJSONArray("nbdata");
-
-                            for (int i = 0; i < jsonArray.length(); i++) {
-                                JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-
-                                String id = jsonObject1.getString("id");
-                                String post_title = jsonObject1.getString("post_title");
-
-                                SpinnerDto dto = new SpinnerDto(post_title, id);
-                                spinnerDtos.add(dto);
-                            }
-
-                            adapterSpinner = new AdapterSpinner(CreatePostActivity.this, spinnerDtos, dialog1, "Post");
-                            spinnerRecy.setAdapter(adapterSpinner);
-                            LinearLayoutManager mLayoutManager = new LinearLayoutManager(CreatePostActivity.this);
-//                                mLayoutManager.setReverseLayout(true);
-//                                mLayoutManager.setStackFromEnd(true);
-                            spinnerRecy.setLayoutManager(mLayoutManager);
-                            spinnerRecy.addOnItemTouchListener(new RecyclerItemClickListener(CreatePostActivity.this, new RecyclerItemClickListener.OnItemClickListener() {
-                                @Override
-                                public void onItemClick(View view, int position) {
-                                    SpinnerDto spinnerDto = spinnerDtos.get(position);
-                                    String txttId = spinnerDto.getId();
-                                    String txtSpinner = spinnerDto.getName();
-
-                                    txtId.setText(txttId);
-                                    textSpinner.setText(txtSpinner);
-                                    dialog1.dismiss();
-
-                                }
-                            }));
-                            spinnerRecy.setHasFixedSize(true);
-
-
-                            //
-                        } else {
-                            //  Toast.makeText(CreatePostActivity.this, message, Toast.LENGTH_SHORT).show();
-                            //.dismiss();
-                        }
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-
-                    //Toast.makeText(getActivity(), "Error is :" + error.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
-            requestQueue.add(request);*/
         dialog1.show();
     }
 
