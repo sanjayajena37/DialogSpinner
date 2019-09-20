@@ -19,7 +19,7 @@ public class DialogSpinner {
     static public ArrayList<String> spinnerDtos; //=new ArrayList<>();
     static public AdapterSpinner adapterSpinner;
 
-    static void show(Context context, String header, ArrayList<String> arrayList, final TextView whereYoucanset) {
+    static public void show(Context context, String header, ArrayList<String> arrayList, final TextView whereYoucanset) {
         final Dialog dialog1 = new Dialog((Activity)context);
         dialog1.setCanceledOnTouchOutside(false);
         spinnerDtos=arrayList;
