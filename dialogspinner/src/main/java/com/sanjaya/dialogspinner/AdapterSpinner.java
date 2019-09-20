@@ -34,43 +34,7 @@ public class AdapterSpinner extends RecyclerView.Adapter<AdapterSpinner.AdapterS
 
         String spinData=spinnerDtos.get(i);
         holder.spinView.setText(spinData);
-        //final String text=spinDto.getName();
 
-        /*final String id=spinDto.getId();
-
-        //final CreatePostActivity con=new CreatePostActivity();
-
-        holder.spinView.setText(text);
-        holder.idView.setText(id);
-
-        holder.spinView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                *//*if(intent.equals("Post")) {
-                    CreatePostActivity.textSpinner.setText(text);
-                    CreatePostActivity.txtId.setText(id);
-                    dialog1.dismiss();
-                }else*//* if(intent.equals("Report")){
-                    ReportActivity.textSpinner.setText(text);
-                    ReportActivity.txtId.setText(id);
-                    dialog1.dismiss();
-                }else if(intent.equals("Business")){
-                    BusinessesFragment.textSpinner.setText(text);
-                    BusinessesFragment.txtId.setText(id);
-                    dialog1.dismiss();
-                }*//*else if(intent.equals("Edprofile")){
-                    EditprofileActivity.textSpinner.setText(text);
-                    EditprofileActivity.txtId.setText(id);
-                    dialog1.dismiss();
-
-                }*//*
-
-
-
-            }
-        });*/
-
-        //context.
 
 
 

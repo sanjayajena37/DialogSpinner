@@ -21,9 +21,9 @@ public class DialogSpinner {
     static public void show(Context context, String header, ArrayList<String> arrayList, final TextView whereYoucanset) {
         final Dialog dialog1 = new Dialog((Activity)context);
         dialog1.setCanceledOnTouchOutside(false);
+        spinnerDtos=new ArrayList<>();
         spinnerDtos=arrayList;
         dialog1.setContentView(R.layout.spinner_view);
-        spinnerDtos.clear();
         dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog1.getWindow().setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
